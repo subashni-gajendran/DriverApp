@@ -16,7 +16,7 @@ export class HomePage {
   waypoints: any;
   start = 'Halifax, NS';
   end = 'Vancouver, BC';
-  waypts:  waypts[] = new Array();
+  waypts:waypts[] = new Array();
    directionsService = new google.maps.DirectionsService;
   directionsDisplay = new google.maps.DirectionsRenderer;
 
