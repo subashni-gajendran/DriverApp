@@ -16,7 +16,7 @@ export class HomePage {
   waypoints: any;
   start = 'Halifax, NS';
   end = 'Vancouver, BC';
-  waypts:waypts[] = new Array();
+  waypts: waypts[] = new Array();
    directionsService = new google.maps.DirectionsService;
   directionsDisplay = new google.maps.DirectionsRenderer;
 
@@ -38,17 +38,44 @@ export class HomePage {
   }
 
   calculateAndDisplayRoute() {
+  console.log(this.waypoints1);
   this.waypts =[];
  
-    for (var _i = 0; _i < this.waypoints.length; _i++) {
-             
+   
+         if(this.waypoints1){
          this.waypts.push({
-              location: this.waypoints[_i],
+              location: this.waypoints1,
               stopover: true
             });
-   
-    }
+            }
 
+   if(this.waypoints2){    
+         this.waypts.push({
+              location: this.waypoints2,
+              stopover: true
+            });
+           }
+            
+            if(this.waypoints3) {   
+         this.waypts.push({
+              location: this.waypoints3,
+              stopover: true
+            });
+            }
+            if(this.waypoints4) {
+         this.waypts.push({
+              location: this.waypoints4,
+              stopover: true
+            });
+            }
+            if(this.waypoints5){
+         this.waypts.push({
+              location: this.waypoints5,
+              stopover: true
+            });
+            }
+   
+console.log(this.waypts);
 
     this.directionsService.route({
       origin: this.start,

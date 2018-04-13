@@ -10,16 +10,19 @@
  
     <div id="floating-panel">
     <b>Start:</b>
-    <select  [(ngModel)]="start" id="start">
+   <!-- <select  [(ngModel)]="start" id="start">
       <option value="Halifax, NS">Halifax, NS</option>
       <option value="Boston, MA">Boston, MA</option>
       <option value="New York, NY">New York, NY</option>
       <option value="Miami, FL">Miami, FL</option>
-    </select>
+    </select>-->
+    <label><input type="text" [(ngModel)]="start" id="start" value=""></label>
+
     <br>
     <b>Waypoints:</b> <br>
+
     <i>(Ctrl+Click or Cmd+Click for multiple selection)</i> <br>
-    <select multiple [(ngModel)]="waypoints" id="waypoints">
+  <!--  <select multiple [(ngModel)]="waypoints" id="waypoints">
       <option value="montreal, quebec">Montreal, QBC</option>
       <option value="toronto, ont">Toronto, ONT</option>
       <option value="chicago, il">Chicago</option>
@@ -27,15 +30,24 @@
       <option value="fargo, nd">Fargo</option>
       <option value="calgary, ab">Calgary</option>
       <option value="spokane, wa">Spokane</option>
-    </select>
+    </select>-->
+    
+    <label><input type="text" name="waypoints1" [(ngModel)]="waypoints1" id="waypoints1" value=""></label>
+    <label><input type="text" name="waypoints2" [(ngModel)]="waypoints2" id="waypoints2" value=""></label>
+    <label><input type="text" name="waypoints3" [(ngModel)]="waypoints3" id="waypoints3" value=""></label>
+    <label><input type="text" name="waypoints4" [(ngModel)]="waypoints4" id="waypoints4" value=""></label>
+    <label><input type="text" name="waypoints5" [(ngModel)]="waypoints5" id="waypoints5" value=""></label>
+   
+
     <br>
     <b>End:</b>
-    <select id="end" [(ngModel)]="end">
+   <!-- <select id="end" [(ngModel)]="end">
       <option value="Vancouver, BC">Vancouver, BC</option>
       <option value="Seattle, WA">Seattle, WA</option>
       <option value="San Francisco, CA">San Francisco, CA</option>
       <option value="Los Angeles, CA">Los Angeles, CA</option>
-    </select>
+    </select>-->
+    <label><input type="text" [(ngModel)]="end" id="end" value=""></label>
     <br>
       <input type="submit" value="Submit" id="submit" (click) ="calculateAndDisplayRoute()" >
     </div>
